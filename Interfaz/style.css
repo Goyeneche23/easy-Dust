@@ -1,0 +1,481 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #000000, #1a1a1a, #333333, #4d4d4d);
+    color: white;
+}
+/*Log in*/
+body.loggear{
+  background-image: url("herramientas/MadagascarBackgound.jpeg");
+  background-repeat: no-repeat; 
+  background-position: center; 
+  position:relative;
+}
+
+header { /*Barra Superrior Info*/
+    width: 100%;
+    background-color: #000;
+    border-bottom: 2px solid green;
+}
+
+.barraTar { /*Ajuste Barra Superior*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.barra-left {
+    display: flex;
+    align-items: center;
+}
+
+.title { /*Easy Dust*/
+    font-size: 24px;
+    margin-right: 15px;
+    color:#4CBB17;
+    position: relative;
+}
+
+.logo { /*Imagen*/
+    position: absolute;
+    width: 55px; 
+    height: auto;
+    left: 48%
+}
+
+.barra-right { /*Distribucion Acerca De, Log out, Racks */
+    display: flex;
+    gap: 50px;
+    position: relative;
+
+}
+
+.barra-button { /*Botones Acerca De, Log out, Racks */
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+
+}
+
+.conteiner {
+  background-color: #11111138; /* Fondo */
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px; /* tamano*/
+  text-align: center;
+  position: relative;
+  top: 280px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid transparent; /* Borde LED */
+  background-clip: padding-box;
+  box-shadow: 0 0 20px #00ff00, 0 0 50px #00ff00; /* brillo borde */
+}
+
+/* Título del formulario */
+.conteiner h1 {
+  font-size: 2em;
+  color: #00ff00;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* Etiquetas */
+.conteiner label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+/* Campos de entrada */
+.conteiner input[type="text"],
+.conteiner input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #00ff00; /* Borde LED */
+  border-radius: 10px;
+  background-color: #222; /* Fondo oscuro */
+  color: #fff;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 10px #00ff00; /* Efecto LED interno */
+}
+
+/* Botón de enviar */
+.conteiner button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  background-color: #00ff00; /* Verde LED */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.conteiner button:hover {
+  background-color: #008000; /* Verde más oscuro */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Checkbox */
+.conteiner input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #00ff00; /* Personalización del checkbox */
+}
+
+.user:hover{
+  background-color: #4CBB17;
+}
+
+.barra-button:hover { /*Cuando presionas Acerca De, Log out, Racks */
+    background-color: #333;
+}
+
+.menuRacks { /*Lista de racks al presionar racks*/
+  display: none; /*Empezara oculta*/
+  background-color: rgb(17, 17, 17); /* Fondo negro */
+  padding: 10px; /*Entre elemento*/
+  border: 2px solid #4CBB17; 
+  position: absolute;
+  left: 75%; /*Posicion*/
+  border-radius: 10%; /*Figura no cuadrada*/
+  width: 200px;
+  height: auto;
+  z-index: 10; /*Su posicion en capa*/
+}
+
+.listRacks nav a { /*Texto en menu racks*/
+  color: white; /* Texto en blanco */
+  display: block;  /*Siempre se muestra*/
+  padding: 5px 0;
+  text-decoration: none; /* sin subrayado */
+}
+
+.listRacks nav a:hover {
+  color: rgb(75, 243, 33); /* Color al pasar el mouse */
+}
+
+.baseDatos { /*Cuadro Izquierdo*/
+  position: absolute;
+  top: 55%; /*Position*/
+  left: 25%;
+  width: 300px;  /*Valores Tamaño*/
+  height: 500px; 
+  background-color: #949494; /*Color Fondo*/
+  border-radius: 10%; /*Forma no cuadrada*/
+  border: 2px solid #4CBB17; /*Borde */
+  transform: translate(-50%, -50%); /*Center Element*/
+}
+
+.estado { /*Cuadro de estado de rack*/
+  position: absolute;
+  top: 50%; /*Position*/
+  left: 70%;
+  width: 500px; /*Tamano*/
+  height: 500px;
+  margin-top: -220px;
+  margin-left: -250px;
+  border: #4CBB17; /*Borde*/
+  border-radius: 10px; /*Borde no cuadrado*/
+  box-shadow: 4px 8px 16px 0 rgba(52, 231, 16, 0.589); /*Borde difuminado */
+  overflow: hidden;
+
+  color: #333; /*Color base*/
+  }
+
+.button {
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  
+.caja { /*Rack Imag*/
+  position: absolute;
+  width: 250px; /* Ajusta el tamaño del logo según sea necesario */
+  display: flex; 
+  justify-content: center;/*CentrAr*/
+  align-items: center;
+  margin: 75px;
+  }
+
+.center {
+  position: absolute;
+  z-index: 2; /*Su posicion en capa*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.line{ /*Lineas*/
+  fill: none;
+  stroke-width: 4px; /*Grosor*/
+  stroke-linecap: round;
+ -webkit-animation: line 3s linear infinite;
+  animation: line 3s linear infinite;
+  }
+  
+.circle{ /*Anim Circulo*/
+  z-index: 10; /*Su posicion en capa*/
+  position: absolute;
+  border: 2px solid #fff; /*Color*/
+  width: 50px;
+  top: 210px;
+  left: 120px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-animation: circle 3.1s ease-out infinite both;
+  animation: circle 3.1s ease-out infinite both;
+}
+
+.switch { /* Switch provisional */
+  display: flex; /*Estuctur*/
+  justify-content: center; /*Centrar*/
+  margin-top: 20px; /*Mover un poco arriba*/
+}
+
+#temp {
+  background-color: #333;
+  color: #6cdc1c;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#temp:hover {
+  background-color: #555;
+}
+
+
+.estado.cold { /*Cambia a frio estado*/
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); /*Fondo cambia a un azul blanco*/
+}
+
+.estado.hot { /*Cambia a hot el estado*/
+  background-image: linear-gradient(62deg, #FF512F, #DD2476); /*Fondo cambia a rojon naranja*/
+  box-shadow: 4px 8px 16px 0 rgba(255, 87, 34, 0.7);
+  animation: flame 1.5s ease-in-out infinite alternate; 
+}
+
+@keyframes flame { /*animation caja "rebota" Alarma*/
+  0% { transform: scale(.98); }
+  50% { transform: scale(1); box-shadow: 4px 8px 16px 0 rgba(255, 87, 34, 0.5); }
+  80% { transform: scale(.97); box-shadow: 4px 8px 16px 0 rgba(255, 87, 34, 0.8); }
+}
+
+.line.hot { /*Cambia linea a color rojo*/
+  stroke: #FF4500;
+}
+
+.circle.hot { /*Camboa circulo a color rojo*/
+  border-color: #FF4500;
+} 
+@-webkit-keyframes line { /*Define tamano de trazo visible y el espacio en la línea SVG */
+  from {
+    stroke-dasharray: 100 660;
+    stroke-dashoffset: 780;
+  }
+  to {
+    stroke-dasharray: 100 660;
+    stroke-dashoffset: 70;
+  }
+}
+@keyframes line {
+  from {
+    stroke-dasharray: 100 1200;
+    stroke-dashoffset: 1300;
+  }
+  to {
+    stroke-dasharray: 100 1200;
+    stroke-dashoffset: 10;
+  }
+}
+  
+@-webkit-keyframes circle { /*Animacion Circuloi*/
+  0%, 50% {
+    opacity: 1; /*Empieza con una opacidad alpha visible*/
+    transform: scale(0); /*Tamano invisible*/
+  }
+  70%, 100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}/* Animación de los círculos (usada en algún efecto de "fuego" o similar) */
+@keyframes circle {
+  /* En los momentos iniciales y a la mitad de la animación, el círculo es opaco y pequeño */
+  0%, 50% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  /* Hacia el 70% y el final de la animación, el círculo se expande y se desvanece */
+  70%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Estilo específico para el estado 'hot' donde se muestra el elemento 'fire' */
+.estado.hot .fire {
+  display: block; /* Asegura que el elemento sea visible */
+  position: absolute; /* Posiciona el fuego en relación a su contenedor */
+  bottom: 5%; /* Coloca el fuego cerca de la base del contenedor */
+  left: 20%; /* Coloca el fuego ligeramente hacia la izquierda */
+  transform: translateX(-50%); /* Centra el elemento horizontalmente */
+}
+
+/* Estilo base para el elemento 'fire', inicialmente invisible */
+.fire {
+  display: none; /* Oculta el elemento por defecto */
+  position: absolute; /* Posiciona el fuegso relativo a su contenedor */
+  top: 50%; /* Centra el fuego verticalmente */
+  left: 50%; /* Centra el fuego horizontalmente */
+  transform: translate(-50%, -25%); /* Ajusta la posición del fuego */
+  height: 20vw; /* Define el tamaño proporcional al ancho de la ventana */
+  width: 20vw; /* Define el tamaño proporcional al ancho de la ventana */
+}
+
+/* Contenedor de las llamas */
+.flames {
+  position: absolute; /* Posiciona las llamas relativo a su contenedor */
+  bottom: 40%; /* Coloca las llamas por encima de la base del fuego */
+  left: 50%; /* Centra las llamas horizontalmente */
+  width: 60%; /* Ajusta el tamaño de las llamas */
+  height: 60%; /* Ajusta el tamaño de las llamas */
+  transform: translateX(-50%) rotate(45deg); /* Rota y centra las llamas */
+}
+
+/* Estilo base para cada llama individual */
+.flame {
+  position: absolute; /* Posiciona cada llama en relación a su contenedor */
+  right: 0%; /* Comienza desde la derecha del contenedor */
+  bottom: 0%; /* Comienza desde la parte inferior del contenedor */
+  width: 0%; /* Tamaño inicial nulo */
+  height: 0%; /* Tamaño inicial nulo */
+  background-color: #FFDC01; /* Color inicial de la llama */
+  border-radius: 1vw; /* Bordes redondeados para simular fuego */
+}
+
+/* Estilo para llamas impares, con animación 'flameodd' */
+.flame:nth-child(2n + 1) {
+  animation: flameodd 2s ease-in infinite; /* Animación continua */
+}
+
+/* Estilo para llamas pares, con animación 'flameeven' */
+.flame:nth-child(2n) {
+  animation: flameeven 2s ease-in infinite; /* Animación continua */
+}
+
+/* Retrasos específicos para cada llama para un efecto de escalonamiento */
+.flame:nth-child(1) { animation-delay: 0s; }
+.flame:nth-child(2) { animation-delay: calc(2s / 4); }
+.flame:nth-child(3) { animation-delay: calc(2s / 2); }
+.flame:nth-child(4) { animation-delay: calc(2s * 3 / 4); }
+
+/* Animación para llamas impares */
+@keyframes flameodd {
+  /* Fase inicial y final: llama pequeña, centrada, amarilla */
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #FFDC01;
+    z-index: 100; /* Asegura que esta llama esté por encima de otras */
+  }
+  /* Fase media: llama grande, ligeramente desplazada, naranja */
+  25% {
+    width: 100%;
+    height: 100%;
+    right: 1%;
+    bottom: 2%;
+    background-color: #FDAC01;
+  }
+  /* Fase final: llama se desplaza más lejos y cambia a rojo */
+  100% {
+    right: 150%;
+    bottom: 170%;
+    background-color: #FF4500;
+    z-index: -10; /* Envía esta llama al fondo */
+  }
+}
+
+/* Animación para llamas pares */
+@keyframes flameeven {
+  /* Fase inicial y final: llama pequeña, centrada, amarilla */
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color:  #FFDC01;
+    z-index: 100; /* Asegura que esta llama esté por encima de otras */
+  }
+  /* Fase media: llama grande, ligeramente desplazada, naranja */
+  25% {
+    width: 100%;
+    height: 100%;
+    right: 2%;
+    bottom: 1%;
+    background-color:  #FDAC01;
+  }
+  /* Fase final: llama se desplaza más lejos y cambia a rojo */
+  100% {
+    right: 170%;
+    bottom: 150%;
+    background-color: #FF4500;
+    z-index: -10; /* Envía esta llama al fondo */
+  }
+}
+
+/*POLVO*/
+.dust{
+  display: none; 
+  position: absolute; 
+  top: 80%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 30vw; 
+  width: 30vw;
+}
+
+.polvo{
+  position: absolute;
+  bottom: 40%; /* Coloca las llamas por encima de la base del fuego */
+  left: 50%; /* Centra las llamas horizontalmente */
+  width: 60%; /* Ajusta el tamaño de las llamas */
+  height: 60%; /* Ajusta el tamaño de las llamas */
+  transform: translateX(-50%) rotate(45deg); /* Rota y centra las llamas */
+}
+
+.polvito{
+  position: absolute; 
+  right: 0%;
+  bottom: 0%; 
+  width: 0%; 
+  height: 0%; 
+  background-color:burlywood; 
+  border-radius: 1vw;
+  opacity: 0.8;
+}
