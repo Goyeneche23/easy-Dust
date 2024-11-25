@@ -1,31 +1,36 @@
 # easy-Dust
-Solución accesible y especializada para el monitoreo de temperatura, humedad y polvo en racks de telecomunicacion.
-
+Solución accesible y especializada para el monitoreo de temperatura, humedad y polvo en racks de telecomunicación.
 
 ## Sensores
-
+Descripción de los sensores utilizados en el proyecto.
 
 ## Base de datos
-
+Detalles sobre la base de datos empleada para almacenar los datos de los sensores.
 
 ## Interfaz
+Instrucciones para probar la interfaz:
+1. Descarga el proyecto.
+2. Ejecuta el archivo `index.html` en tu navegador.
 
-#### Animation
+### Animation
 
-##### Wind
-El elemento <path> en SVG (Scalable Vector Graphics) define una ruta a seguir, creando formas complejas mediante comandos. Los comandos más comunes en un <path> son:
+#### Wind
+El elemento `<path>` en SVG (Scalable Vector Graphics) define una ruta a seguir, creando formas complejas mediante comandos. Los comandos más comunes en un `<path>` son:
 
-M (moveto): mueve la posición actual a un punto específico, sin dibujar una línea.
+- **M (moveto)**: mueve la posición actual a un punto específico, sin dibujar una línea.
+- **L (lineto)**: dibuja una línea desde el punto actual hasta el punto especificado.
+- **C (curveto)**: dibuja una curva cúbica Bézier.
+- **S (smooth curveto)**: dibuja una curva cúbica Bézier suave.
+- **Q (quadratic Bézier curve)**: dibuja una curva cuadrática Bézier.
+- **T (smooth quadratic Bézier curveto)**: dibuja una curva cuadrática Bézier suave.
+- **Z (closepath)**: cierra la ruta, conectando el último punto al punto inicial.
 
-L (lineto): dibuja una línea desde el punto actual hasta el punto especificado.
+## Presentaciones
+Para abrir las presentaciones de pitch y demostración, utiliza los siguientes enlaces a Canva:
+- Pitch
+- Demostración
 
-C (curveto): dibuja una curva cúbica Bézier.
-
-S (smooth curveto): dibuja una curva cúbica Bézier suave.
-
-Q (quadratic Bézier curve): dibuja una curva cuadrática Bézier.
-
-T (smooth quadratic Bézier curveto): dibuja una curva cuadrática Bézier suave.
-
-Z (closepath): cierra la ruta, conectando el último punto al punto inicial.
-
+## Pruebas
+Para probar los sensores y la base de datos, sigue estos pasos:
+1. Navega a las carpetas `test_dht`, `test_gp2` y `base_de_datos`.
+2. Ejecuta los archivos de prueba con el IDE de tu preferencia, recomendablemente Arduino.
