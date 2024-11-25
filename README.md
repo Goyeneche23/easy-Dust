@@ -1,11 +1,11 @@
-# easy-Dust
+# Easy-Dust
 Solución accesible y especializada para el monitoreo de temperatura, humedad y polvo en racks de telecomunicación.
 
 ## Sensores
-Descripción de los sensores utilizados en el proyecto.
+Se usan sensores dht11 y GP2Y1010AU0F 
 
 ## Base de datos
-Detalles sobre la base de datos empleada para almacenar los datos de los sensores.
+Almacenará las lecturas de los modulos de sensores en los racks, accesible y visible mediante la UI.
 
 ## Interfaz
 Instrucciones para probar la interfaz:
@@ -34,3 +34,8 @@ Para abrir las presentaciones de pitch y demostración, utiliza los siguientes e
 Para probar los sensores y la base de datos, sigue estos pasos:
 1. Navega a las carpetas `test_dht`, `test_gp2` y `base_de_datos`.
 2. Ejecuta los archivos de prueba con el IDE de tu preferencia, recomendablemente Arduino.
+
+## Documentación Adicional
+El proyecto incluye:
+- La ficha técnica de los dos sensores utilizados.
+- El archivo para imprimir en 3D el módulo que contendrá los sensores.
