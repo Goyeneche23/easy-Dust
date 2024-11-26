@@ -28,6 +28,9 @@ El elemento `<path>` en SVG (Scalable Vector Graphics) define una ruta a seguir,
 - **T (smooth quadratic Bézier curveto)**: dibuja una curva cuadrática Bézier suave.
 - **Z (closepath)**: cierra la ruta, conectando el último punto al punto inicial.
 
+### Snow
+Se crea una trayectoria a travez del div en el que se encuentra y se crean distintas particulas en diferentes posiciones y con diferentes velocidades(delay).
+
 ## Presentaciones
 Para abrir las presentaciones de pitch y demostración, utiliza los siguientes enlaces a Canva:
 - Pitch
