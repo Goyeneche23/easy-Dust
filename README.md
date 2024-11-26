@@ -10,7 +10,10 @@ Almacenará las lecturas de los modulos de sensores en los racks, accesible y vi
 ## Interfaz
 Instrucciones para probar la interfaz:
 1. Descarga el proyecto.
-2. Ejecuta el archivo `index.html` en tu navegador.
+2. Tener Xampp instalado.
+3. Descargar base de datos `easy_dust.sql`.
+4. mover carpeta interfaz en .htdocs.
+5. Ejecuta `(http://localhost/Interfaz/index.html)` en tu navegador.
 
 ### Animation
 
